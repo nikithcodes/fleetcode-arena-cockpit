@@ -1,11 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState, useEffect } from 'react';
+import { Navigation } from '../components/Navigation';
+import { UserProfile } from '../components/UserProfile';
+import { BattleQueue } from '../components/BattleQueue';
+import { Leaderboard } from '../components/Leaderboard';
+import { FriendsList } from '../components/FriendsList';
+import { RecentBattles } from '../components/RecentBattles';
+import { ProblemRecommendations } from '../components/ProblemRecommendations';
 
 const Index = () => {
+  const [isQueuing, setIsQueuing] = useState(false);
+  const [matchFound, setMatchFound] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950">
+      <Navigation />
+      
+      <div className="container mx-auto px-4 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          {/* Left Column */}
+          <div className="lg:col-span-3 space-y-6">
+            <UserProfile />
+            <FriendsList />
+          </div>
+          
+          {/* Center Column */}
+          <div className="lg:col-span-6 space-y-6">
+            <BattleQueue 
+              isQueuing={isQueuing} 
+              setIsQueuing={setIsQueuing}
+              matchFound={matchFound}
+              setMatchFound={setMatchFound}
+            />
+            <RecentBattles />
+            <ProblemRecommendations />
+          </div>
+          
+          {/* Right Column */}
+          <div className="lg:col-span-3">
+            <Leaderboard />
+          </div>
+        </div>
       </div>
     </div>
   );
