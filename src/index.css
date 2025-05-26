@@ -1,9 +1,16 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
+    /* FleetCode Grayscale Palette */
+    --ds-gray-400-value: 222, 17%, 8%;   /* Deep backgrounds */
+    --ds-gray-300-value: 222, 17%, 12%;  /* Cards & navigation */
+    --ds-gray-200-value: 222, 17%, 20%;  /* Outlines & shadows */
+    --ds-gray-100-value: 222, 17%, 90%;  /* Text & highlights */
+    
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -35,19 +42,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -97,5 +97,47 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* FleetCode Grayscale Custom Classes */
+.fc-bg-deep {
+  background-color: hsla(var(--ds-gray-400-value), 1);
+}
+
+.fc-bg-card {
+  background-color: hsla(var(--ds-gray-300-value), 1);
+}
+
+.fc-bg-outline {
+  background-color: hsla(var(--ds-gray-200-value), 1);
+}
+
+.fc-text {
+  color: hsla(var(--ds-gray-100-value), 1);
+}
+
+.fc-border {
+  border-color: hsla(var(--ds-gray-200-value), 1);
+}
+
+.fc-shadow {
+  box-shadow: 0 4px 6px -1px hsla(var(--ds-gray-200-value), 0.3);
+}
+
+.fc-glow {
+  box-shadow: 0 0 20px hsla(var(--ds-gray-100-value), 0.1);
+}
+
+.fc-pulse {
+  animation: fc-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes fc-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
   }
 }

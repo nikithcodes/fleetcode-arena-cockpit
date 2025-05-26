@@ -56,19 +56,19 @@ export const BattleQueue: React.FC<BattleQueueProps> = ({
   };
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6">
+    <div className="fc-bg-card fc-border border fc-shadow rounded-xl p-6">
       <div className="text-center">
-        <h2 className="text-2xl font-bold text-white mb-6 flex items-center justify-center space-x-2">
-          <Sword className="w-6 h-6 text-cyan-400" />
+        <h2 className="text-2xl font-bold fc-text mb-6 flex items-center justify-center space-x-2">
+          <Sword className="w-6 h-6 fc-text" />
           <span>1v1 Battle Arena</span>
         </h2>
         
         {!isQueuing && !matchFound && (
           <div className="space-y-4">
-            <p className="text-gray-400 mb-6">Ready to prove your coding skills?</p>
+            <p className="fc-text opacity-70 mb-6">Ready to prove your coding skills?</p>
             <button
               onClick={handleQueue}
-              className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-red-500/25"
+              className="w-full fc-bg-outline hover:fc-glow fc-text font-bold py-4 px-8 rounded-xl transition-all duration-200 hover:scale-105 fc-shadow"
             >
               <div className="flex items-center justify-center space-x-2">
                 <Sword className="w-5 h-5" />
@@ -80,16 +80,16 @@ export const BattleQueue: React.FC<BattleQueueProps> = ({
         
         {isQueuing && !matchFound && (
           <div className="space-y-6">
-            <div className="animate-pulse">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                <Clock className="w-8 h-8 text-white animate-spin" />
+            <div className="fc-pulse">
+              <div className="w-16 h-16 fc-bg-outline rounded-full mx-auto mb-4 flex items-center justify-center">
+                <Clock className="w-8 h-8 fc-text animate-spin" />
               </div>
-              <p className="text-white font-semibold">Searching for opponent...</p>
-              <p className="text-gray-400">Queue time: {queueTime}s</p>
+              <p className="fc-text font-semibold">Searching for opponent...</p>
+              <p className="fc-text opacity-60">Queue time: {queueTime}s</p>
             </div>
             <button
               onClick={handleQueue}
-              className="px-6 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg transition-colors"
+              className="px-6 py-2 fc-bg-deep hover:fc-glow fc-text rounded-lg transition-all duration-200"
             >
               Cancel Queue
             </button>
@@ -98,28 +98,28 @@ export const BattleQueue: React.FC<BattleQueueProps> = ({
         
         {matchFound && (
           <div className="space-y-6">
-            <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4">
-              <h3 className="text-green-400 font-bold text-lg mb-4">Match Found!</h3>
+            <div className="fc-border border fc-glow rounded-lg p-4">
+              <h3 className="fc-text font-bold text-lg mb-4">Match Found!</h3>
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mb-2">
-                    <span className="text-white font-bold">CM</span>
+                  <div className="w-12 h-12 fc-bg-outline rounded-full flex items-center justify-center mb-2">
+                    <span className="fc-text font-bold">CM</span>
                   </div>
-                  <p className="text-sm text-white">You</p>
-                  <p className="text-xs text-gray-400">Rating: 1,847</p>
+                  <p className="text-sm fc-text">You</p>
+                  <p className="text-xs fc-text opacity-60">Rating: 1,847</p>
                 </div>
-                <div className="text-red-400 text-2xl font-bold">VS</div>
+                <div className="fc-text text-2xl font-bold">VS</div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mb-2">
-                    <User className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 fc-bg-outline rounded-full flex items-center justify-center mb-2">
+                    <User className="w-6 h-6 fc-text" />
                   </div>
-                  <p className="text-sm text-white">ByteNinja</p>
-                  <p className="text-xs text-gray-400">Rating: 1,823</p>
+                  <p className="text-sm fc-text">ByteNinja</p>
+                  <p className="text-xs fc-text opacity-60">Rating: 1,823</p>
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">{countdown}</div>
-                <p className="text-gray-400">Battle starts in...</p>
+                <div className="text-3xl font-bold fc-text mb-2 fc-pulse">{countdown}</div>
+                <p className="fc-text opacity-60">Battle starts in...</p>
               </div>
             </div>
           </div>

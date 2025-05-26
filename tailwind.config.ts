@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// FleetCode Grayscale Palette
+				'fc-gray': {
+					400: 'hsla(var(--ds-gray-400-value), 1)', // Deep backgrounds
+					300: 'hsla(var(--ds-gray-300-value), 1)', // Cards & navigation
+					200: 'hsla(var(--ds-gray-200-value), 1)', // Outlines & shadows
+					100: 'hsla(var(--ds-gray-100-value), 1)', // Text & highlights
 				}
 			},
 			borderRadius: {

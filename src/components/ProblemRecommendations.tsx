@@ -30,58 +30,53 @@ export const ProblemRecommendations = () => {
     }
   ];
 
-  const getDifficultyColor = (difficulty: string) => {
-    switch (difficulty) {
-      case 'Easy': return 'text-green-400 bg-green-400/20';
-      case 'Medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'Hard': return 'text-red-400 bg-red-400/20';
-      default: return 'text-gray-400 bg-gray-400/20';
-    }
+  const getDifficultyStyle = (difficulty: string) => {
+    return 'fc-text fc-bg-outline';
   };
 
   return (
-    <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 p-6">
+    <div className="fc-bg-card fc-border border fc-shadow rounded-xl p-6">
       <div className="flex items-center space-x-2 mb-6">
-        <Target className="w-5 h-5 text-green-400" />
-        <h2 className="text-lg font-bold text-white">Recommended Problems</h2>
-        <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full">
+        <Target className="w-5 h-5 fc-text" />
+        <h2 className="text-lg font-bold fc-text">Recommended Problems</h2>
+        <span className="text-xs fc-text opacity-60 fc-bg-deep px-2 py-1 rounded-full">
           Personalized for you
         </span>
       </div>
       
       <div className="space-y-4">
         {problems.map((problem, index) => (
-          <div key={index} className="bg-gray-900/40 rounded-lg p-4 hover:bg-gray-900/60 transition-all duration-200 hover:scale-[1.02] cursor-pointer group">
+          <div key={index} className="fc-bg-deep rounded-lg p-4 hover:fc-glow transition-all duration-200 hover:scale-[1.02] cursor-pointer group">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h3 className="text-white font-semibold mb-1 group-hover:text-cyan-400 transition-colors">
+                <h3 className="fc-text font-semibold mb-1 group-hover:opacity-80 transition-all duration-200">
                   {problem.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-2">{problem.description}</p>
+                <p className="fc-text opacity-60 text-sm mb-2">{problem.description}</p>
                 <div className="flex items-center space-x-2 mb-2">
-                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(problem.difficulty)}`}>
+                  <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getDifficultyStyle(problem.difficulty)}`}>
                     {problem.difficulty}
                   </span>
-                  <div className="flex items-center space-x-1 text-xs text-gray-400">
+                  <div className="flex items-center space-x-1 text-xs fc-text opacity-60">
                     <Star className="w-3 h-3" />
                     <span>{problem.rating}</span>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1">
                   {problem.tags.map((tag, tagIndex) => (
-                    <span key={tagIndex} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs">
+                    <span key={tagIndex} className="fc-bg-outline fc-text px-2 py-1 rounded text-xs">
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105 flex items-center space-x-2">
+              <button className="fc-bg-outline hover:fc-glow fc-text px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105 flex items-center space-x-2 fc-shadow">
                 <Code className="w-4 h-4" />
                 <span>Solve</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
-            <div className="text-xs text-gray-400">
+            <div className="text-xs fc-text opacity-60">
               {problem.solved.toLocaleString()} developers solved this
             </div>
           </div>

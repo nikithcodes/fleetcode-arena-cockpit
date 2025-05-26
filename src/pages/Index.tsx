@@ -13,7 +13,7 @@ const Index = () => {
   const [matchFound, setMatchFound] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950">
+    <div className="min-h-screen fc-bg-deep">
       <Navigation />
       
       <div className="container mx-auto px-4 py-8">
