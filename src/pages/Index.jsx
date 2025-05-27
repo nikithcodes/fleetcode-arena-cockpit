@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Navigation } from '../components/Navigation';
 import { UserProfile } from '../components/UserProfile';
 import { BattleQueue } from '../components/BattleQueue';
-import { Leaderboard } from '../components/Leaderboard';
-import { FriendsList } from '../components/FriendsList';
 import { RecentBattles } from '../components/RecentBattles';
 import { ProblemRecommendations } from '../components/ProblemRecommendations';
 
@@ -18,13 +16,12 @@ const Index = () => {
       
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Left Column */}
+          {/* Left Column - User Profile */}
           <div className="lg:col-span-3 space-y-6">
             <UserProfile />
-            <FriendsList />
           </div>
           
-          {/* Center Column */}
+          {/* Center Column - Battle Queue and Recent Battles */}
           <div className="lg:col-span-6 space-y-6">
             <BattleQueue 
               isQueuing={isQueuing} 
@@ -33,12 +30,11 @@ const Index = () => {
               setMatchFound={setMatchFound}
             />
             <RecentBattles />
-            <ProblemRecommendations />
           </div>
           
-          {/* Right Column */}
+          {/* Right Column - Problem Recommendations (Full Width) */}
           <div className="lg:col-span-3">
-            <Leaderboard />
+            <ProblemRecommendations />
           </div>
         </div>
       </div>
