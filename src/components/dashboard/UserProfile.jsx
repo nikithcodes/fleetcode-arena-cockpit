@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { TrendingUp, Trophy, Target, Flame } from 'lucide-react';
+import './UserProfile.css';
 
 const UserProfile = () => (
   <div className="profile-card">

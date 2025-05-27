@@ -1,0 +1,235 @@
+
+/* Battle Queue Styles */
+.battle-queue-card {
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  border: 1px solid #404040;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.battle-queue-card:hover {
+  box-shadow: 0 15px 40px rgba(74, 85, 104, 0.2);
+  border-color: #4a5568;
+  transform: translateY(-5px);
+}
+
+.queue-content {
+  text-align: center;
+}
+
+.queue-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e5e7eb;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #4a5568;
+}
+
+.queue-subtitle {
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+}
+
+.queue-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4a5568, #718096);
+  color: #e5e7eb;
+  font-weight: bold;
+  padding: 1.25rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+}
+
+.queue-btn:hover {
+  box-shadow: 0 12px 35px rgba(74, 85, 104, 0.6);
+  transform: scale(1.05) translateY(-3px);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.searching-animation {
+  margin-bottom: 1.5rem;
+}
+
+.search-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #4a5568, #718096);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  animation: pulse 2s infinite;
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.4);
+}
+
+.spinning-clock {
+  width: 2rem;
+  height: 2rem;
+  color: #e5e7eb;
+  animation: spin 2s linear infinite;
+}
+
+.search-text {
+  font-weight: 600;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+}
+
+.queue-time {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, #2a2a2a, #363636);
+  color: #e5e7eb;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #4a5568;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cancel-btn:hover {
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+  transform: translateY(-2px);
+}
+
+.match-container {
+  border: 1px solid #4a5568;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(74, 85, 104, 0.3);
+  background: linear-gradient(135deg, #2a2a2a, #363636);
+}
+
+.match-title {
+  font-weight: bold;
+  color: #e5e7eb;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.vs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.player {
+  text-align: center;
+}
+
+.player-avatar {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(135deg, #4a5568, #718096);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  box-shadow: 0 6px 20px rgba(74, 85, 104, 0.4);
+}
+
+.player-initials {
+  font-weight: bold;
+  color: #e5e7eb;
+}
+
+.player-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #e5e7eb;
+}
+
+.player-name {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.player-rating {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.vs-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #e5e7eb;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e5e7eb;
+  margin-bottom: 0.5rem;
+  animation: pulse 1s infinite;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-text {
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .vs-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

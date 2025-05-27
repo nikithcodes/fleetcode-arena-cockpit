@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Sword, Trophy, MessageCircle, User } from 'lucide-react';
+import './Navigation.css';
 
 const Navigation = () => (
   <nav className="navigation">

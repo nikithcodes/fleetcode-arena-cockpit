@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Target, Star, Code, ArrowRight } from 'lucide-react';
+import './ProblemRecommendations.css';
 
 const ProblemRecommendations = () => {
   const problems = [

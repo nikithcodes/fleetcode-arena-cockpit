@@ -1,0 +1,121 @@
+
+/* Recent Battles Styles */
+.battles-card {
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  border: 1px solid #404040;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.battles-card:hover {
+  box-shadow: 0 15px 40px rgba(74, 85, 104, 0.2);
+  border-color: #4a5568;
+  transform: translateY(-5px);
+}
+
+.battles-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.battles-header h2 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #e5e7eb;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.history-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #4a5568;
+}
+
+.battles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.battle-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: linear-gradient(135deg, #2a2a2a, #363636);
+  border: 1px solid #404040;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.battle-item:hover {
+  box-shadow: 0 8px 25px rgba(74, 85, 104, 0.3);
+  transform: translateY(-2px);
+  border-color: #4a5568;
+}
+
+.battle-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.battle-result {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4a5568, #718096);
+  box-shadow: 0 4px 15px rgba(74, 85, 104, 0.3);
+}
+
+.result-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #e5e7eb;
+}
+
+.battle-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.battle-opponent {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.battle-problem {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.battle-meta {
+  text-align: right;
+}
+
+.battle-outcome {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.battle-outcome.loss {
+  color: #9ca3af;
+}
+
+.battle-time {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
